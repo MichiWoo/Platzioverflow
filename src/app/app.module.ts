@@ -4,13 +4,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+// Material Angular
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import 'hammerjs';
+
+import { QuestionDetailComponent } from './question/question-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuestionDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
