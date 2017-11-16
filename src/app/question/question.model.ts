@@ -8,7 +8,7 @@ export class Question {
     title: string;
     description: string;
     createdAt?: Date;
-    icon?: string;
+    icon?: string
   ) {
     this.title = title;
     this.description = description;
