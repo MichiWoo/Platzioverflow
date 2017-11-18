@@ -1,6 +1,22 @@
 <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <input
+      type="text"
+      matInput
+      placeholder="Nombre"
+      formControlName="firstName"
+      id="firstName">
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      type="text"
+      matInput
+      placeholder="Apellido"
+      formControlName="lastName"
+      id="lastName">
+  </mat-form-field>
+  <mat-form-field>
+    <input
       matInput
       placeholder="Correo Electrónico"
       formControlName="email"
@@ -13,22 +29,6 @@
       placeholder="Contraseña"
       formControlName="password"
       id="password">
-  </mat-form-field>
-  <mat-form-field>
-    <input
-      type="text"
-      matInput
-      placeholder="FirstName"
-      formControlName="firstName"
-      id="firstName">
-  </mat-form-field>
-  <mat-form-field>
-    <input
-      type="text"
-      matInput
-      placeholder="LastName"
-      formControlName="lastName"
-      id="lastName">
   </mat-form-field>
   <button type="submit" mat-raised-button color="accent">Registrarse</button>
 </form>
