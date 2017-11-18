@@ -8,9 +8,9 @@ export class Question {
   answers: Answer[];
 
   constructor(
-    title: string;
-    description: string;
-    createdAt?: Date;
+    title: string,
+    description: string,
+    createdAt?: Date,
     icon?: string
   ) {
     this.title = title;

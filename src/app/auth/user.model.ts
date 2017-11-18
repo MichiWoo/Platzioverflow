@@ -8,5 +8,5 @@ export class User {
 
   fullName() {
     return `${this.firstName} ${this.lastName}`;
-}
+  }
 }
