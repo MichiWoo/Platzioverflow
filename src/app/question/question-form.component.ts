@@ -10,6 +10,9 @@ import icons from './icons';
     i {
       font-size: 48px;
     }
+    small {
+      display: block;
+    }
   `]
 })
 

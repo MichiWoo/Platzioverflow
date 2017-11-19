@@ -14,6 +14,14 @@
     ngModel>
   </mat-form-field>
   <mat-grid-list cols="3" rowHeight="3:2">
+    <mat-grid-tile>
+      <!-- <md-radio-group [ngModel] name="icon">
+        <md-radio-button value='none'> -->
+          <i mat-list-icon class="material-icons">help</i>
+          <small>Sin ícono</small>
+        <!-- </md-radio-button>
+      </md-radio-group> -->
+    </mat-grid-tile>
     <mat-grid-tile *ngFor="let icon of icons">
       <i mat-list-icon class="devicon-{{ icon.name }}-{{ getIconVersion(icon) }}"></i>
     </mat-grid-tile>
