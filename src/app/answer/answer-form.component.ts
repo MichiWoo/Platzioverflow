@@ -17,7 +17,7 @@ import { Question } from '../question/question.model';
 export class AnswerFormComponent {
   @Input() question = Question;
 
-  onSubmit(form: ngForm) {
+  onSubmit(form: NgForm) {
     const answer = new Answer(
       form.value.description,
       this.question,
