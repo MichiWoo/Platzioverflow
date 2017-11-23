@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:server": "babel-node server/index.js",
+    "start:server": "set DEBUG=platzi-overflow* && babel-node server/index.js",
     "start:client": "ng serve"
   },
   "private": true,
