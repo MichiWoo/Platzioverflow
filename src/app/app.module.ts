@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
@@ -17,6 +18,7 @@ import { QuestionListComponent } from './question/question-list.component';
 import { QuestionFormComponent } from './question/question-form.component';
 
 import { MomentModule } from 'angular2-moment';
+
 import { Routing } from './app.routing';
 
 @NgModule({
@@ -36,7 +38,8 @@ import { Routing } from './app.routing';
     MomentModule,
     FormsModule,
     ReactiveFormsModule,
-    Routing
+    Routing,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
