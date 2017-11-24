@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Question } from './question.model';
 import icons from './icons';
+import { QuestionService } from './question.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-question-form',
@@ -13,20 +15,25 @@ import icons from './icons';
     small {
       display: block;
     }
-  `]
+  `],
+  providers: [QuestionService]
 })
-
 export class QuestionFormComponent {
   icons: Object[] = icons;
 
+  constructor(
+    private questionService: QuestionService,
+    private router: Router
+  ) {}
+
   getIconVersion(icon: any) {
-   let version;
-   if (icon.versions.font.includes('plain-wordmark')) {
-     version = 'plain-wordmark';
-   } else {
-     version = icon.versions.font[0];
-   }
-   return version;
+    let version;
+    if (icon.versions.font.includes('plain-wordmark')) {
+      version = 'plain-wordmark';
+    } else {
+      version = icon.versions.font[0];
+    }
+    return version;
   }
 
   onSubmit(form: NgForm) {
@@ -36,6 +43,11 @@ export class QuestionFormComponent {
       new Date(),
       form.value.icon
     );
-    console.log(q);
+    this.questionService.addQuestion(q)
+      .subscribe(
+        ({ _id }) => this.router.navigate(['/questions', _id]),
+        error => console.log(error)
+      );
+    form.resetForm();
   }
 }
