@@ -15,7 +15,7 @@ import { QuestionService } from './question.service';
       padding: 0 !important;
       font-size: 48px !important;
     }
-    .add-question {
+    .add_question {
       position: fixed;
       bottom: 30px;
       right: 30px;
